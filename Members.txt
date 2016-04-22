@@ -6,4 +6,8 @@ MEMBER 2 HAO
  
 MEMBER 3 Eric
  
-MEMBER 4 DU MA MAY 	
+<<<<<<< HEAD
+MEMBER 4  	
+=======
+MEMBER 4 dzn
+>>>>>>> origin/master
