@@ -10,3 +10,11 @@ html, body {
     width:95%; 
     height:60%;
 }
+
+#summary {
+    padding-bottom: 30px;
+}
+
+#removeButton {
+    margin-bottom: 50px;
+}
