@@ -14,6 +14,7 @@ if (locationIndex !== null)
 var dateRef = document.getElementById('date');
 
 var currentDate = new Date();
+dateRef.innerHTML = '<h4>'+ currentDate.simpleDateString() + '</h4>';
 currentDate = currentDate.forecastDateString();
 
 var weatherData;
@@ -23,4 +24,11 @@ LocationWeatherCache.getWeatherAtIndexForDate(locationIndex, currentDate, popula
 var populateWeatherData = function(index, weatherObj)
 {
     weatherData = weatherObj;
+}
+
+function sliderChange(value)
+{
+    var date = new Date();
+    date.setDate(date.getDate() - (29-value));  //the slider's max value is 29 so when the slider is at max position the date is the current date
+    dateRef.innerHTML = '<h4>' + date.simpleDateString() + '</h4>';
 }
