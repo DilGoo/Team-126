@@ -10,3 +10,17 @@ if (locationIndex !== null)
     // If a location name was specified, use it for header bar title.
     document.getElementById("headerBarTitle").textContent = locationNames[locationIndex];
 }
+
+var dateRef = document.getElementById('date');
+
+var currentDate = new Date();
+currentDate = currentDate.forecastDateString();
+
+var weatherData;
+
+LocationWeatherCache.getWeatherAtIndexForDate(locationIndex, currentDate, populateWeatherData);
+
+var populateWeatherData = function(index, weatherObj)
+{
+    weatherData = weatherObj;
+}
